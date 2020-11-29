@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "../styles/pages/Home.module.css";
+import styles from "../../styles/pages/Home.module.css";
+import CategoryBadge from "../utils/Badge";
 
 const Header = () => {
   return (
@@ -12,12 +13,7 @@ const Header = () => {
         />
       </div>
       <div id="content" className="absolute bottom-0 text-white p-4">
-        <span
-          id="badge-category"
-          className="bg-gradient-to-r from-red-500 to-yellow-700 py-1 px-3 text-sm rounded-full"
-        >
-          Sport
-        </span>
+        <CategoryBadge>Sport</CategoryBadge>
         <h2 className="text-3xl mt-3 font-semibold tracking-wide">
           Lorem title
         </h2>

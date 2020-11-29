@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .bg-gradient {
-  @apply bg-gradient-to-r from-red-500 to-yellow-700;
+  @apply bg-gradient-to-tr from-pink-500 to-yellow-600;
 }

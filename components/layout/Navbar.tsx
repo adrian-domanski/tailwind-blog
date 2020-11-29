@@ -1,4 +1,18 @@
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
+
+const NavigationLink: React.FC<{ href: string; value: string }> = ({
+  value,
+  href,
+}) => (
+  <li>
+    <Link href={href}>
+      <a className="text-gray-700 tracking-wider text-xl border-b border-gray-300 text-center block py-3">
+        {value}
+      </a>
+    </Link>
+  </li>
+);
 
 const Navbar = () => {
   const [isMobileActive, setIsMobileActive] = useState(false);
@@ -30,30 +44,10 @@ const Navbar = () => {
           isMobileActive ? "" : "scale-y-0"
         } absolute top-full w-full bg-gray-200 transition-transform ease-out origin-top`}
       >
-        <li>
-          <a
-            href="#"
-            className="text-gray-700 tracking-wider text-xl border-b border-gray-300 text-center block py-3"
-          >
-            Home
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            className="text-gray-700 tracking-wider text-xl border-b border-gray-300 text-center block py-3"
-          >
-            Home
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            className="text-gray-700 tracking-wider text-xl border-b border-gray-300 text-center block py-3"
-          >
-            Home
-          </a>
-        </li>
+        <NavigationLink href="#" value="Home" />
+        <NavigationLink href="#" value="About" />
+        <NavigationLink href="#" value="Articles" />
+        <NavigationLink href="#" value="Contact" />
       </ul>
 
       <button id="hamburger" className="mr-4" onClick={toggleMobile}>
